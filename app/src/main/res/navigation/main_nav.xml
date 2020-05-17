@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/selectedFragment">
+
+    <fragment
+        android:id="@+id/selectedFragment"
+        android:name="com.ardakazanci.pitonyazilimmulakatcase.ui.main.SelectedFragment"
+        android:label="SelectedFragment">
+        <action
+            android:id="@+id/action_selectedFragment_to_inputFragment"
+            app:destination="@id/inputFragment" />
+        <action
+            android:id="@+id/action_selectedFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="com.ardakazanci.pitonyazilimmulakatcase.ui.input.InputFragment"
+        android:label="InputFragment" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.ardakazanci.pitonyazilimmulakatcase.ui.list.ListFragment"
+        android:label="ListFragment" />
+</navigation>

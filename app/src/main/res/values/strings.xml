@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Piton Yazilim Mulakat Case</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_text_day">Günlük Görev Girişi</string>
+    <string name="btn_text_week">Haftalık Görev Girişi</string>
+    <string name="btn_text_month">Aylık Görev Girişi</string>
+    <string name="btn_text_save">Kaydet</string>
+    <string name="edt_text_hint">Görev Nedir ?</string>
+    <string name="btn_text_all_todo">Görevleri Listele</string>
+    <string name="btn_text_todo_insert">Görev Gir</string>
+    <string name="rdb_text_day">Günlük</string>
+    <string name="rdb_text_week">Haftalık</string>
+    <string name="rdb_text_month">Aylık</string>
 </resources>

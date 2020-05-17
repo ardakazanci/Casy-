@@ -8,11 +8,22 @@ import android.view.ViewGroup
 import com.ardakazanci.pitonyazilimmulakatcase.R
 import com.ardakazanci.pitonyazilimmulakatcase.commons.BaseFragment
 import com.ardakazanci.pitonyazilimmulakatcase.databinding.FragmentInputBinding
+import org.koin.android.viewmodel.ext.android.getViewModel
 
-class InputFragment : BaseFragment<FragmentInputBinding, InputViewModule>() {
+class InputFragment : BaseFragment() {
 
-    override fun getViewModel(): Class<InputViewModule> = InputViewModule::class.java
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return binding<FragmentInputBinding>(inflater, R.layout.fragment_input, container).apply {
+            viewModel = getViewModel<InputViewModel>().apply {
 
-    override fun getLayoutRes(): Int = R.layout.fragment_input
+            }
+            lifecycleOwner = this@InputFragment
+        }.root
+    }
 
+    
 }

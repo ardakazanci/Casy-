@@ -5,6 +5,13 @@
 
     <data>
 
+        <variable
+            name="viewmodel"
+            type="com.ardakazanci.pitonyazilimmulakatcase.ui.list.ListViewModel" />
+
+        <variable
+            name="adapter"
+            type="com.ardakazanci.pitonyazilimmulakatcase.ui.list.TaskListAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,6 +21,9 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:adapter="@{adapter}"
+            app:adapterTaskList="@{viewmodel.tasks}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"

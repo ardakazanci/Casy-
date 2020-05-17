@@ -5,6 +5,13 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.ardakazanci.pitonyazilimmulakatcase.ui.input.InputViewModel" />
+
+        <variable
+            name="utils"
+            type="com.ardakazanci.pitonyazilimmulakatcase.utils.Utils" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,6 +31,7 @@
 
 
             <EditText
+                android:text="@={viewModel.listTaskContent}"
                 android:gravity="start"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,6 +40,7 @@
                 android:lines="10" />
 
             <Button
+                android:onClick="@{()->viewModel.saveTask()}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_text_save" />
@@ -43,23 +52,27 @@
 
 
                 <RadioGroup
+                    android:checkedButton="@={viewModel.listTaskTypeTime}"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <RadioButton
+                        android:id="@+id/rdb_month"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="8dp"
                         android:text="@string/rdb_text_day" />
 
                     <RadioButton
+                        android:id="@+id/rdb_week"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="8dp"
                         android:text="@string/rdb_text_week" />
 
                     <RadioButton
+                        android:id="@+id/rdb_day"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="8dp"
